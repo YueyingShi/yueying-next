@@ -15,7 +15,7 @@ export function Banner() {
         }}
       />
       {/* Text */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center z-20">
+      <div className="absolute inset-0 flex flex-col justify-center items-center z-20 font-garamond">
         <h1 className="text-white text-4xl md:text-6xl font-bold">
           Welcome to My Portfolio
         </h1>
