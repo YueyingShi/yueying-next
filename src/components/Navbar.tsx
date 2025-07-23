@@ -1,6 +1,7 @@
-"use client"; // If using Next.js App Router
+"use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,10 +21,14 @@ export default function Navbar() {
         isScrolled ? "bg-black/50 backdrop-blur-md" : "bg-transparent"
       }`}
     >
-      <nav className="flex max-w-7xl mx-auto p-4 text-white justify-between">
-        <a href="/">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
+      <nav className="flex max-w-7xl mx-auto p-4 text-white justify-between gap-4">
+        <Link href="/">Home</Link>
+        <Link href="#projects" scroll={false}>
+          Projects
+        </Link>
+        <Link href="#about" scroll={false}>
+          About
+        </Link>
       </nav>
     </div>
   );

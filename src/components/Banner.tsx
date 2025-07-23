@@ -1,5 +1,7 @@
+"use client";
 import MoonScene from "./MoonScene";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import { Typewriter } from "react-simple-typewriter";
 export function Banner() {
   return (
     <div className="flex justify-center items-center h-screen  overflow-hidden">
@@ -16,11 +18,27 @@ export function Banner() {
         }}
       />
       {/* Text */}
-      <div className="absolute inset-0 flex flex-col gap-8 justify-center items-center z-20 text-white pointer-events-none ">
+      <div className="absolute inset-0 flex flex-col gap-8 justify-center items-center z-10 text-white pointer-events-none ">
         <div className="flex flex-col gap-2 items-center text-center ">
-          <h1 className=" text-4xl md:text-6xl  font-garamond ">Ellan Shi</h1>
           <p className="text-xl md:text-2xl font-thin pointer-events-none">
-            Message from the MOON
+            HELLO from the MOON
+          </p>
+          <h1 className=" text-4xl md:text-8xl  font-garamond ">
+            It's Ellan Shi
+          </h1>
+          <p className="text-xl md:text-2xl font-thin pointer-events-none">
+            ... and let us talk about{" "}
+            <span className="">
+              <Typewriter
+                words={["design.", "data.", "life."]}
+                loop={0} // 0 = infinite loop
+                cursor
+                cursorStyle="I"
+                typeSpeed={80}
+                deleteSpeed={60}
+                delaySpeed={1200}
+              />
+            </span>
           </p>
         </div>
         <a
@@ -32,7 +50,7 @@ export function Banner() {
       </div>
 
       {/* 3D Scene */}
-      <div className="z-10">
+      <div className="">
         <MoonScene />
       </div>
     </div>

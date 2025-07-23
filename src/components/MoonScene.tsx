@@ -13,7 +13,7 @@ export default function MoonScene() {
 
   useEffect(() => {
     if (!mountRef.current) return;
-
+    const mountNode = mountRef.current;
     const scene = new THREE.Scene();
     scene.background = null;
 
@@ -79,8 +79,10 @@ export default function MoonScene() {
     animate();
 
     return () => {
-      renderer.dispose();
-      mountRef.current?.removeChild(renderer.domElement);
+      // cleanup
+      if (mountNode) {
+        mountNode.removeChild(renderer.domElement);
+      }
     };
   }, []);
 
