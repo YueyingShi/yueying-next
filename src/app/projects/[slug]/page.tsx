@@ -18,6 +18,8 @@ export default function ProjectPage({ params }: Props) {
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
-    slug: project.slug,
+    params: {
+      slug: project.slug,
+    },
   }));
 }
