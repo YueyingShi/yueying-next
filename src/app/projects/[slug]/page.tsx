@@ -1,18 +1,11 @@
 import { projects } from "@/data/projects";
+import { notFound } from "next/navigation";
 import { ProjectDetail } from "@/components/ProjectDetail";
 
-interface ProjectPageProps {
-  params: {
-    slug: string;
-  };
-}
-
-export default function ProjectPage({ params }: ProjectPageProps) {
+export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project = projects.find((p) => p.slug === params.slug);
 
-  if (!project) {
-    return <p>Project not found</p>;
-  }
+  if (!project) return notFound();
 
   return <ProjectDetail project={project} />;
 }
