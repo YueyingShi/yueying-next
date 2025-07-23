@@ -1,10 +1,14 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;200;300;400;500;600;700&display=swap");
+@theme {
+  --font-garamond: "EB Garamond", "sans-serif";
+  --font-roboto: "Roboto", sans-serif;
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-/* Apply fonts using Tailwind classes, not raw CSS here */
 body {
-  @apply bg-white text-black font-sans; /* use Tailwind classes */
+  @apply bg-gray-50 text-gray-900;
 }

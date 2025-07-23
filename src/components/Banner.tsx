@@ -1,4 +1,5 @@
 import MoonScene from "./MoonScene";
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
 export function Banner() {
   return (
     <div className="flex justify-center items-center h-screen  overflow-hidden">
@@ -15,13 +16,19 @@ export function Banner() {
         }}
       />
       {/* Text */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center z-20 font-garamond">
-        <h1 className="text-white text-4xl md:text-6xl font-bold">
-          Welcome to My Portfolio
-        </h1>
-        <p className="text-white text-xl md:text-2xl font-light mt-4">
-          Explore my projects and learn more about me.
-        </p>
+      <div className="absolute inset-0 flex flex-col gap-8 justify-center items-center z-20 text-white pointer-events-none ">
+        <div className="flex flex-col gap-2 items-center text-center ">
+          <h1 className=" text-4xl md:text-6xl  font-garamond ">Ellan Shi</h1>
+          <p className="text-xl md:text-2xl font-thin pointer-events-none">
+            Message from the MOON
+          </p>
+        </div>
+        <a
+          href="#projects"
+          className="p-2 pt-3 pb-1 rounded-full hover:bg-[#ffffff66] pointer-events-auto"
+        >
+          <ChevronDownIcon className="h-16 w-16" />
+        </a>
       </div>
 
       {/* 3D Scene */}

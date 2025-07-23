@@ -1,15 +1,16 @@
 import { Banner } from "@/components/Banner";
 import { ProjectList } from "@/components/ProjectList";
-import { Layout } from "@/components/Layout";
 import { projects } from "@/data/projects";
+import Navbar from "@/components/Navbar";
 
 export default function HomePage() {
   return (
-    <Layout>
+    <>
+      <Navbar />
       <Banner />
-      <div className="max-w-7xl mx-auto p-8">
+      <div className="max-w-7xl mx-auto p-8" id="projects">
         <ProjectList projects={projects} />
       </div>
-    </Layout>
+    </>
   );
 }
