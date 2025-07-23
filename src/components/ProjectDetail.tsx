@@ -1,7 +1,7 @@
 import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { MDXRemote } from "next-mdx-remote/rsc";
+// import path from "path";
+// import matter from "gray-matter";
+// import { MDXRemote } from "next-mdx-remote/rsc";
 
 export async function generateStaticParams() {
   const files = fs.readdirSync("content/projects");

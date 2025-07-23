@@ -24,7 +24,7 @@ export function Banner() {
             HELLO from the MOON
           </p>
           <h1 className=" text-4xl md:text-8xl  font-garamond ">
-            It's Ellan Shi
+            It&apos;s Ellan Shi
           </h1>
           <p className="text-xl md:text-2xl font-thin pointer-events-none">
             ... and let us talk about{" "}
